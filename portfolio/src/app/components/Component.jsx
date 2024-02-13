@@ -6,6 +6,15 @@ import rsLogo from '@/app/assets/rsLogo.png'
 
 
 export default function Component() {
+
+  const scrollToId = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
+
   return (
     <>
       <Navbar fluid rounded className='bg-transparent'>
@@ -18,12 +27,12 @@ export default function Component() {
           <Navbar.Toggle />
         </div>
         <Navbar.Collapse>
-          <Navbar.Link href="#" className='text-white text-lg'>
+          {/* <Navbar.Link href="#" className='text-white text-lg' >
             Welcome
-          </Navbar.Link>
-          <Navbar.Link href="#" className='text-white text-lg hover:text-black'>Works</Navbar.Link>
-          <Navbar.Link href="#" className='text-white text-lg'>About</Navbar.Link>
-          <Navbar.Link href="#" className='text-white text-lg'>Reviews</Navbar.Link>
+          </Navbar.Link> */}
+          <Navbar.Link href="#" className='text-white text-lg hover:text-black' >Works</Navbar.Link>
+          <Navbar.Link href="#" className='text-white text-lg' onClick={() => scrollToId('stack')}>Tech Stack</Navbar.Link>
+          <Navbar.Link href="#" className='text-white text-lg' onClick={() => scrollToId('about')}>About</Navbar.Link>
         </Navbar.Collapse>
       </Navbar>
     </>
