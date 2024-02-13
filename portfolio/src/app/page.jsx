@@ -2,6 +2,7 @@
 import { Montserrat } from "next/font/google";
 import { Button, Navbar } from 'flowbite-react';
 import { useState, useEffect } from 'react';
+import { Icon } from '@iconify-icon/react';
 import Component from "@/app/components/Component"
 import TechStack from "@/app/components/TechStack"
 import '@/app/css/TerminalTextEffect.css';
@@ -26,7 +27,7 @@ const montserrat = Montserrat({
 //   x.style.color = random_color;  
 // }
 
-
+// className="transition ease-in-out hover:scale-110 duration-300 hover:cursor-pointer drop-shadow-lg hover:drop-shadow-glow"
 
 
 
@@ -91,9 +92,37 @@ export default function Home() {
               </div>
         </div>
       </section>
-      {/* Icons https://icongr.am/devicon */}
+
+      {/* Icons https://icon-sets.iconify.design/?query=css */}
       <section className="grid place-items-center pb-48 m-0" id="stacks" >
-        <TechStack></TechStack>
+
+      <div className=" text-white text-4xl font-bold bg-neutral-800 w-4/6 m-0 rounded-xl">
+              <div className="grid place-items-center p-0 my-4">
+                  <div className="grid mt-2 ml-4 mr-4 gap-8 gap-x-20 gap-y-6 grid-cols-6 grid-rows-3 justify-items-center" id="tech">
+                  <div className="col-span-6"><h1 className="text-4xl font-bold">Technologies</h1></div>
+                    {/* HTMl */}
+                    <div><Icon icon="logos:html-5" width="5rem" height="5rem" className="transition ease-in-out hover:scale-110 duration-300 hover:cursor-pointer drop-shadow-lg hover:drop-shadow-glow" /></div>
+                    {/* CSS */}
+                    <div><Icon icon="logos:css-3" width="5rem" height="5rem" className="transition ease-in-out hover:scale-110 duration-300 hover:cursor-pointer drop-shadow-lg hover:drop-shadow-glow" /></div>
+                    {/* JavaScript */}
+                    <div><Icon icon="logos:javascript" width="4rem" height="4rem" className="transition ease-in-out hover:scale-110 duration-300 hover:cursor-pointer drop-shadow-lg hover:drop-shadow-glow" /></div>
+                    {/* NodeJS */}
+                    <div><Icon icon="logos:nodejs-icon" width="5rem" height="5rem" className="transition ease-in-out hover:scale-110 duration-300 hover:cursor-pointer drop-shadow-lg hover:drop-shadow-glow" /></div>
+                    {/* NextJS */}
+                    <div><Icon icon="logos:nextjs-icon" width="5rem" height="5rem" className="transition ease-in-out hover:scale-110 duration-300 hover:cursor-pointer drop-shadow-lg hover:drop-shadow-glow" /></div>
+                    {/* React */}
+                    <div><Icon icon="logos:react" width="5rem" height="5rem" className="transition ease-in-out hover:scale-110 duration-300 hover:cursor-pointer drop-shadow-lg hover:drop-shadow-glow" /></div>
+                    {/* Typescript */}
+                    <div><Icon icon="devicon:typescript" width="5rem" height="5rem" className="transition ease-in-out hover:scale-110 duration-300 hover:cursor-pointer drop-shadow-lg hover:drop-shadow-glow" /></div>
+                    {/* Tailwind */}
+                    <div><Icon icon="devicon:tailwindcss" width="5rem" height="5rem" className="transition ease-in-out hover:scale-110 duration-300 hover:cursor-pointer drop-shadow-lg hover:drop-shadow-glow" /></div>
+                    {/* Github */}
+                    <div><Icon icon="mdi:github" width="5rem" height="5rem" className="transition ease-in-out hover:scale-110 duration-300 hover:cursor-pointer drop-shadow-lg hover:drop-shadow-glow" /></div>
+                    {/* <div><p className="text-lg font-normal">React</p></div>
+                    <div><p className="text-lg font-normal">Typescript</p></div> */}
+                  </div>
+              </div>
+        </div>
       </section>
 
       
