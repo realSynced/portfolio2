@@ -1,7 +1,6 @@
 
 'use client';
 import { Flowbite, Button, Navbar, CustomFlowbiteTheme } from 'flowbite-react';
-import rsLogo from '@/app/assets/rsLogo.png'
 
 
 
@@ -30,13 +29,11 @@ export default function Component() {
           {/* <Navbar.Link href="#" className='text-white text-lg' >
             Welcome
           </Navbar.Link> */}
-          <Navbar.Link href="#" className='text-white text-lg hover:text-black' data-modal-target="default-modal" data-modal-toggle="default-modal">Works</Navbar.Link>
+          <Navbar.Link href="#" className='text-white text-lg hover:text-black' >Works</Navbar.Link>
           <Navbar.Link href="#" className='text-white text-lg' onClick={() => scrollToId('tech')}>Tech Stack</Navbar.Link>
           <Navbar.Link href="#" className='text-white text-lg' onClick={() => scrollToId('about')}>About</Navbar.Link>
         </Navbar.Collapse>
       </Navbar>
-
-      
     </>
   );
 }

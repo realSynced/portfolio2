@@ -4,8 +4,12 @@ import { Button, Navbar } from 'flowbite-react';
 import { useState, useEffect } from 'react';
 import { Icon } from '@iconify-icon/react';
 import Component from "@/app/components/Component"
-import TechStack from "@/app/components/TechStack"
+import Works from "@/app/components/Works"
+import Portfolio from "@/app/components/Portfolio"
+import PortfolioTabs from "@/app/components/PortfolioTabs"
 import '@/app/css/TerminalTextEffect.css';
+import '@radix-ui/themes/styles.css';
+
 
 
 import rsLogo from '@/app/assets/rsLogo.png'
@@ -62,7 +66,7 @@ export default function Home() {
 
 
   return (
-    <main className={`${montserrat.className} m-0 p-0 min-h-screen`}>
+    <main className={`${montserrat.className} overflow-y-hidden m-0 p-0 min-h-screen overflow-hidden`}>
       <Component className=""></Component>
 
       
@@ -92,6 +96,18 @@ export default function Home() {
               </div>
         </div>
       </section>
+      <section className="grid place-items-center pb-48 m-0" id="about" >
+        <div className=" text-white text-4xl font-bold bg-neutral-800 w-3/6 m-0 rounded-xl">
+
+              <div className="grid justify-items-center p-0 my-4 ml-4">
+                <h1>🎨 Check out my works! 🎨</h1>
+                
+                <PortfolioTabs/>
+              </div>
+        </div>
+      </section>
+
+
 
       {/* Icons https://icon-sets.iconify.design/?query=css */}
       <section className="grid place-items-center pb-48 m-0" id="stacks" >
