@@ -1,29 +1,28 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Theme } from '@radix-ui/themes';
-import { Card, Inset, Strong, Text } from '@radix-ui/themes';
-
-const Portfolio = ( {content} ) => {
+const Portfolio = ( {title, content, link} ) => {
   
   return (
     <>
     
-    <Theme>
-          <Card size="2" style={{ maxWidth: 240 }}>
-                <Inset clip="padding-box" side="top" pb="current">
-                  <img
-                    src="https://images.unsplash.com/photo-1617050318658-a9a3175e34cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
-                    alt="Bold typography"
-                    style={{
-                      display: 'block',
-                      objectFit: 'cover',
-                      width: '100%',
-                      height: 140,
-                    }}
-                  />
-                </Inset>
-                <div>{content}</div>
-            </Card>
-      </Theme>
+    
+
+      <div class="w-4/6 h-6/6 bg-white border border-gray-200 rounded-lg shadow col-start-1 col-end-3 mb-4">
+          {/* <a href="#">
+              <img class="rounded-t-lg" src="" alt="" />
+          </a> */}
+          <div class="p-5">
+              <a href="#">
+                  {title}
+              </a>
+              {content}
+              <a href={link} target="_blank" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 ">
+                  Visit
+                  <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                  </svg>
+              </a>
+          </div>
+      </div>
+
     
     </>
   );

@@ -1,6 +1,6 @@
 
 'use client';
-import { Flowbite, Button, Navbar, CustomFlowbiteTheme } from 'flowbite-react';
+import { Flowbite, Button, Navbar } from 'flowbite-react';
 
 
 
@@ -22,7 +22,7 @@ export default function Component() {
           <span className="text-white self-center whitespace-nowrap text-xl font-semibold dark:text-white">realSynced</span>
         </Navbar.Brand>
         <div className="flex md:order-2">
-          <Button className='bg-black'>Contact</Button>
+          <Button className='hidden md:block bg-black'>Contact</Button>
           <Navbar.Toggle />
         </div>
         <Navbar.Collapse>
@@ -32,6 +32,7 @@ export default function Component() {
           <Navbar.Link href="#" className='text-white text-lg hover:text-black' >Works</Navbar.Link>
           <Navbar.Link href="#" className='text-white text-lg' onClick={() => scrollToId('tech')}>Tech Stack</Navbar.Link>
           <Navbar.Link href="#" className='text-white text-lg' onClick={() => scrollToId('about')}>About</Navbar.Link>
+          <Navbar.Link href="#" className='md:hidden text-white text-lg' onClick={() => scrollToId('')}>Contact</Navbar.Link>
         </Navbar.Collapse>
       </Navbar>
     </>
